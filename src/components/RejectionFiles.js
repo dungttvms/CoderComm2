@@ -21,11 +21,15 @@ function RejectionFiles({ fileRejections }) {
             <Typography variant="subtitle2" noWrap>
               {path} - {fData(size)}
             </Typography>
-            {errors.map((error) => {
+            {/* <Typography variant="caption" component="p">
+              - {error.message}
+            </Typography>*/}
+            {errors.map((error) => (
               <Typography key={error.code} variant="caption" component="p">
                 - {error.message}
-              </Typography>;
-            })}
+              </Typography>
+            ))}
+            ;
           </Box>
         );
       })}
